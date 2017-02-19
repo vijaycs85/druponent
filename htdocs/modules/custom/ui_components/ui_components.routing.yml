@@ -1,0 +1,6 @@
+ui_components.card_board:
+  path: '/ui-component/card-board'
+  defaults:
+    _controller: '\Drupal\ui_components\Controller\UiComponentsController:getCardBoard'
+  requirements:
+    _access: 'TRUE'

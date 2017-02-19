@@ -1,0 +1,70 @@
+{
+  "name": "component_d8",
+  "version": "1.0.0",
+  "description": "Components with twig support to integrate with Drupal 8.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "clean:file": "rm -rf ./node_modules && rm -rf ./jspm_packages && find htdocs/ui/ -mindepth 1 -maxdepth 1 -type d -not -path 'htdocs/ui/data' | xargs rm -rfv",
+    "clean": "npm run clean:file",
+    "install:components": "cd ./jspm_packages/npm/ && dirlist=$(find . -name 'eurostar-*' -type d) && for dir in $dirlist; do echo $dir; cd $dir; npm install; cd ..; done",
+    "install:basic": "npm run clean && npm install && jspm install && npm run install:components",
+    "install:prod": "npm run install:basic && ./node_modules/.bin/gulp prod",
+    "install:dev": "npm run install:basic && ./node_modules/.bin/gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijaycs85/component_d8.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijaycs85/component_d8/issues"
+  },
+  "homepage": "https://github.com/vijaycs85/component_d8#readme",
+  "devDependencies": {
+    "browser-sync": "2.13.0",
+    "del": "2.2.0",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-chug": "0.5.1",
+    "gulp-combine-media-queries": "0.2.0",
+    "gulp-file": "0.3.0",
+    "gulp-flatten": "0.2.0",
+    "gulp-json-to-yaml": "0.0.2",
+    "gulp-minify-css": "1.2.4",
+    "gulp-modernizr": "1.0.0-alpha",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "2.3.2",
+    "gulp-svg-sprite": "1.3.1",
+    "gulp-util": "3.0.7",
+    "gulp-watch": "4.3.6",
+    "jspm": "0.16.39",
+    "npm-run-all": "^2.3.0",
+    "path": "0.12.7",
+    "run-sequence": "1.2.1",
+    "sass-jspm-importer": "0.0.6"
+  },
+  "jspm": {
+    "configFile": "jspm.config.js",
+    "dependencies": {
+      "@material/card": "npm:@material/card@0.1.3",
+      "breakpoint-sass": "npm:breakpoint-sass@2.7.0",
+      "eurostar-action": "npm:eurostar-action@1.0.27",
+      "eurostar-base-styles": "npm:eurostar-base-styles@1.0.30",
+      "eurostar-card": "npm:eurostar-card@1.0.27",
+      "eurostar-card-board": "npm:eurostar-card-board@1.0.28",
+      "normalize-scss": "npm:normalize-scss@5.0.3",
+      "susy": "npm:susy@2.2.12"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@5.8.38",
+      "babel-runtime": "npm:babel-runtime@5.8.38",
+      "core-js": "npm:core-js@1.2.6"
+    },
+    "overrides": {
+      "npm:eurostar-card@1.0.27": {
+        "format": "es6"
+      }
+    }
+  }
+}

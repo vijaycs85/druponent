@@ -1,0 +1,24 @@
+external.min1600:
+  label: 'Minimum width 1600'
+  mediaQuery: '(min-width: 1600px)'
+  weight: 10
+  multipliers:
+    - 1x
+external.min1200:
+  label: 'Minimum width 1200'
+  mediaQuery: '(min-width: 1200px)'
+  weight: 9
+  multipliers:
+    - 1x
+external.min600:
+  label: 'Minimum width 600'
+  mediaQuery: '(min-width: 600px)'
+  weight: 8
+  multipliers:
+    - 1x
+external.null:
+  label: 'Minimum width 1'
+  mediaQuery: '(min-width: 1px)'
+  weight: 0
+  multipliers:
+    - 1x

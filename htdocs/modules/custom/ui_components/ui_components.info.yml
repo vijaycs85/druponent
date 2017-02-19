@@ -1,0 +1,6 @@
+name: 'UI Components'
+type: module
+description: 'Discovery and rendering of UI components - based on https://www.drupal.org/files/issues/component_PoC-individual_commits-2702061-2-do-not-test.patch'
+package: Custom
+version: VERSION
+core: 8.x

@@ -1,0 +1,50 @@
+<?php
+/**
+ * @file
+ * UI Components
+ */
+
+/**
+ * Implements hook_library_info_build().
+ *
+ * Add components' asset libraries.
+ * @todo Fix extensions.
+ *
+ */
+function ui_components_library_info_build() {
+  $libraries = [];
+  $extension = 'ui_components';
+  $components = \Drupal::service('theme_component_discovery')->getComponents();
+  $extension_components_with_libraries = array_filter($components, function ($component) use ($extension) {
+    // If this component has an asset library for the current extension, then
+    // it is guaranteed to be named '<extension>/<component ID>'.
+    return isset($component['_asset_libraries'][$extension . '/' . $component['id']]);
+  });
+  foreach ($extension_components_with_libraries as $component_id => $component_definition) {
+    $libraries[$component_id] = $component_definition['_asset_libraries'][$extension . '/' . $component_id];
+  }
+  return $libraries;
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function ui_components_theme_registry_alter(&$theme_registry) {
+  \Drupal::service('ui_components_theme.registry')->build($theme_registry);
+  // Allow other modules to react on added components.
+  \Drupal::moduleHandler()->alter('ui_component_registry', $theme_registry);
+}
+
+/**
+ * Implements hook_components_directory_alter;
+ */
+function ui_components_components_directory_alter(&$module_directories) {
+  $module_directories['ui_components'] = DRUPAL_ROOT . '/' .  \Drupal::config('ui_components.settings')->get('pattern_library_path');
+}
+
+/**
+ * Implements hook_components_path;
+ */
+function ui_components_components_path() {
+  return \Drupal::config('ui_components.settings')->get('pattern_library_path');
+}

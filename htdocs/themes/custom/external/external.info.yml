@@ -1,0 +1,18 @@
+name: External
+type: theme
+base theme: stable
+description: 'External'
+package: Core
+version: VERSION
+core: 8.x
+features:
+  - favicon
+  - logo
+libraries:
+  - external/global
+libraries-override:
+  core/modernizr: external/modernizr
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'

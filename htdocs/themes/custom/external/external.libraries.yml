@@ -1,0 +1,17 @@
+global:
+  version: 8.0.0
+  css:
+    base:
+      /ui/assets/styles.css: {preprocess: false, minified: false}
+  js:
+    # Need to specify a negative weight and should rendered after drupalSettingsLoader.
+    /ui/assets/app.js: {preprocess: false, minified: false, weight: '-17'}
+  dependencies:
+    - external/modernizr
+    - core/drupalSettings
+
+modernizr:
+  version: 8.0.1
+  header: true
+  js:
+    /ui/assets/modernizr.js: {preprocess: false, minified: true}

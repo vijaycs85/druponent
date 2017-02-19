@@ -1,0 +1,7 @@
+services:
+  theme_component_discovery:
+    class: Drupal\ui_components\Theme\ComponentDiscovery
+    arguments: ['@app.root', '@module_handler', '@theme_handler', '@theme.manager']
+  ui_components_theme.registry:
+    class: Drupal\ui_components\Theme\UiComponentsRegistry
+    arguments: ['@module_handler']
