@@ -18,7 +18,7 @@ git clone git@github.com:vijaycs85/druponent.git
 ```
 ./build.sh
 ```
-3. Visit the site and install drupal as usual.
+3. Visit the site to continue Drupal installation wizard.
 
 
 ## Structure
