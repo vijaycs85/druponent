@@ -22,15 +22,12 @@ git clone git@github.com:vijaycs85/druponent.git
 
 
 ## Structure
-assets
---src
-----styles.css
-----main.js
-----sprite
-gulp
-htdocs
+```
+assets - Assets to build components.
+gulp - build taks.
+htdocs - Docroot of drupal installation.
 --modules/custom
 --profiles/custom
 --themes/custom
 
-
+```
