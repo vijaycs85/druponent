@@ -4,11 +4,11 @@ Drupal 8 profile to create a drupal installation that consume NPM components and
 # Getting started
 To get started you will need:
 * NPM (>= 4)
-* List of available components can be found here
+* Sample components can be found [here](https://www.npmjs.com/~eurostar-npm)
 
 ## Installation
 
-1. Download/clone profile
+1. Download/clone/composer crate 
 ```
 cd Directory/you/want/to/work/into/it
 git clone git@github.com:vijaycs85/druponent.git
@@ -20,12 +20,17 @@ git clone git@github.com:vijaycs85/druponent.git
 ```
 3. Visit the site and install drupal as usual.
 
-4. Enable "UI Components" module and set "external" as default theme.
 
-5. Visit `/ui-component/card-board` to confirm the sample component
+## Structure
+assets
+--src
+----styles.css
+----main.js
+----sprite
+gulp
+htdocs
+--modules/custom
+--profiles/custom
+--themes/custom
 
-
-## TODO:
-
-- Create profile to enabled custom module and theme.
 
