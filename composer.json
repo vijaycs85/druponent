@@ -1,6 +1,6 @@
 {
-  "name": "vijaycs85/dcomponent",
-  "description": "Drupal 8 component",
+  "name": "vijaycs85/druponent",
+  "description": "Drupal component based profile.",
   "type": "project",
   "license": "GPL-2.0+",
   "repositories": [
