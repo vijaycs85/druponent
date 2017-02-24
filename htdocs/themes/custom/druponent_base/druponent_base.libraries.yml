@@ -7,7 +7,7 @@ global:
     # Need to specify a negative weight and should rendered after drupalSettingsLoader.
     /ui/assets/app.js: {preprocess: false, minified: false, weight: '-17'}
   dependencies:
-    - external/modernizr
+    - druponent_base/modernizr
     - core/drupalSettings
 
 modernizr:

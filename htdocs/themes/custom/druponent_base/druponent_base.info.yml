@@ -1,7 +1,7 @@
-name: External
+name: Druponent Base
 type: theme
 base theme: stable
-description: 'External'
+description: 'Druponent base theme'
 package: Core
 version: VERSION
 core: 8.x
@@ -9,9 +9,9 @@ features:
   - favicon
   - logo
 libraries:
-  - external/global
+  - druponent_base/global
 libraries-override:
-  core/modernizr: external/modernizr
+  core/modernizr: druponent_base/modernizr
 regions:
   header: 'Header'
   content: 'Content'

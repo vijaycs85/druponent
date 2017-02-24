@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the druponent installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function druponent_install() {
+  // Enable the admin theme.
+  \Drupal::configFactory()
+    ->getEditable('node.settings')
+    ->set('use_admin_theme', TRUE)
+    ->save(TRUE);
+
+  // Set frontend theme.
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'druponent_base')
+    ->save(TRUE);
+
+  // Set default pages.
+  \Drupal::configFactory()->getEditable('system.site')
+    ->set('page.front', '/ui-component/card-board')
+    ->save(TRUE);
+}
