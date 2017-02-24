@@ -29,3 +29,12 @@ jspm_packages/
 # Ignore ui generated packages and dest
 htdocs/ui
 htdocs/sites/
+htdocs/.csslintrc
+htdocs/.editorconfig
+htdocs/.eslintignore
+htdocs/.eslintrc
+htdocs/.gitattributes
+htdocs/.htaccess
+htdocs/autoload.php
+htdocs/index.php
+htdocs/update.php
