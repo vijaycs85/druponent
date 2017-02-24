@@ -47,7 +47,6 @@
   "jspm": {
     "configFile": "jspm.config.js",
     "dependencies": {
-      "@material/card": "npm:@material/card@0.1.3",
       "breakpoint-sass": "npm:breakpoint-sass@2.7.0",
       "eurostar-action": "npm:eurostar-action@1.0.27",
       "eurostar-base-styles": "npm:eurostar-base-styles@1.0.30",
