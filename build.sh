@@ -20,23 +20,6 @@ then
   popd
 fi
 
-if [ -z "$SKIP_INSTALL" ]
-then
-  drush si
-fi
-
-if [ -z "$SKIP_UPDATES" ]
-then
-  # update hooks
-  drush -y updatedb
-  # config import
-  drush -y cim
-  # entity updates
-  drush -y entity-updates
-  # cache rebuild
-  drush -y cr
-fi
-
 if [ -z "$SKIP_NPM" ]
 then
   nvm install v4.4.7
